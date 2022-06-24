@@ -1,3 +1,5 @@
+import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs"
+
 function cargar_pajaros_y_tuberias() {
   loadRoot("./sprites/")
   loadSprite("jugador", "bird.png")
@@ -20,10 +22,11 @@ function preparar_jugador(puntaje) {
     sprite("jugador"),
     scale(0.08),
     pos(80, 80),
+    area(),
     body(), // implements gravity on the object
   ])
 
-  keyPress("space", () => {
+  onKeyPress("space", () => {
     jugador.jump(fuerzaDeSalto)
   })
 
@@ -68,6 +71,8 @@ function preparar_obstaculos(jugador, puntaje){
       origin("bot"),
       pos(width() - 10, obstaculo_position),
       scale(height() / 400, 2.5),
+      area(),
+      solid(),
       "obstaculo" // "obstaculo" tag
     ])
 
@@ -76,6 +81,8 @@ function preparar_obstaculos(jugador, puntaje){
       pos(width() - 10, obstaculo_position + distanciaEntreObstaculos),
       scale(height() / 400, -2.5),
       origin("bot"),
+      area(),
+      solid(),
       "obstaculo",
       {
         passed: false,
@@ -118,19 +125,55 @@ function preparar_fondo_escena_principal(){
 
 function inicializar_motor_grafico() {
   // initialize Kaboom
-  kaboom({
+  return kaboom({
     global: true, // import all functions into global namespace
     fullscreen: true, // render across entire browser window
   })
 }
+function start_game(){
+// initiate game to the scene named "principal"
+go("principal")
+}
 
 
+function preparar_fondo_escena_gameover() {
+  add([
+    sprite("gameover_bg"),
+    scale(width() / 3000, height() / 3000),
+    origin("topleft")
+  ])
+}
+
+function  mostrar_puntaje_final(puntaje) {
+  add([
+    text(`Score: ${puntaje}`, 30),
+    pos(width() / 2, height() / 2 - 50),
+    origin("center")
+  ])
+}
+
+function mostrar_reiniciar_juego() {
+
+  add([
+    text("Press space to play again.", {size: 18}),
+    pos(width() / 2, height() / 2),
+    origin("center")
+  ])
+
+  keyPress("space", () => {
+    go("principal")
+  })
+}
 export {
   inicializar_motor_grafico,
+  start_game,
   cargar_pajaros_y_tuberias,
   cargar_cubil_scout,
   preparar_jugador,
   crear_puntaje,
   preparar_obstaculos,
   preparar_fondo_escena_principal,
+  preparar_fondo_escena_gameover,
+  mostrar_puntaje_final,
+  mostrar_reiniciar_juego
 }
