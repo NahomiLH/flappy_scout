@@ -27,6 +27,8 @@ function preparar_jugador(puntaje) {
     jugador.jump(fuerzaDeSalto)
   })
 
+  onClick(() => jugador.jump(fuerzaDeSalto))
+
   // si el jugador se sale de la pantalla
   jugador.action(() => {
     if (jugador.pos.y >= height()) {
