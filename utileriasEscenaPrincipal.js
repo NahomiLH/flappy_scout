@@ -1,5 +1,5 @@
 function cargar_pajaros_y_tuberias() {
-  loadRoot("sprites/")
+  loadRoot("./sprites/")
   loadSprite("jugador", "bird.png")
   loadSprite("background", "ocean.jpg")
   loadSprite("gameover_bg", "bird_bg.jpg")
@@ -7,7 +7,7 @@ function cargar_pajaros_y_tuberias() {
 }
 
 function cargar_cubil_scout() {
-  loadRoot("sprites/")
+  loadRoot("./sprites/")
   loadSprite("jugador", "grupo6.png")
   loadSprite("background", "trees.jpg")
   loadSprite("gameover_bg", "gameover_bg_2.jpg")
