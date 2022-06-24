@@ -167,10 +167,11 @@ function mostrar_reiniciar_juego() {
   keyPress("space", () => {
     go("principal")
   })
-  onTouchStart(() => {
+  onTouchEnd(() => {
     go("principal")
   })
 }
+
 export {
   inicializar_motor_grafico,
   start_game,
