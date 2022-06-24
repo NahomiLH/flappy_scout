@@ -1,8 +1,9 @@
 # Flappy Bird
-This game was created during Execute Big's Tech Roulette Week 1 and uses Kaboom, a JavaScript library that allows you to create games quickly and easily.
+I took the example from:
+https://github.com/jbian92/Flappy-Bird
 
-## How to Play
-Using the SPACE bar to jump, navigate the blue bird through the space between the columns of green pipes. Try to get as far right as you can!
+Plase support the offical repo.
 
-## Game Demo
-![Flappy Bird demo](flappy-bird.gif)
+## Main gol 
+
+The goal of this repo is to show how to program to kids from 7 to 10 years old
