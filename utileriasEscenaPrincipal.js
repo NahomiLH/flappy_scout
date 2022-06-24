@@ -30,7 +30,7 @@ function preparar_jugador(puntaje) {
     jugador.jump(fuerzaDeSalto)
   })
 
-  onClick(() => {
+  onTouchStart(() => {
     jugador.jump(fuerzaDeSalto)
   })
 
@@ -165,6 +165,9 @@ function mostrar_reiniciar_juego() {
   ])
 
   keyPress("space", () => {
+    go("principal")
+  })
+  onTouchStart(() => {
     go("principal")
   })
 }
