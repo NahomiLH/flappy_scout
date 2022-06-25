@@ -12,7 +12,7 @@ function cargar_cubil_scout() {
   loadRoot("./sprites/")
   loadSprite("jugador", "grupo6.png")
   loadSprite("background", "trees.jpg")
-  loadSprite("gameover_bg", "gameover_bg_2.jpg")
+  loadSprite("gameover_bg", "bandera.jpg")
   loadSprite("obstaculo", "pine.png")
 }
 
@@ -122,7 +122,7 @@ function preparar_fondo_escena_principal(){
 
   add([
     sprite("background"),
-    scale(width() / 4000, height() / 2500),
+    scale(width() / 1000, height() / 1000),
     origin("topleft")
   ])
 }
@@ -143,7 +143,7 @@ go("principal")
 function preparar_fondo_escena_gameover() {
   add([
     sprite("gameover_bg"),
-    scale(width() / 3000, height() / 3000),
+    scale(width() / 300, height() / 300),
     origin("topleft")
   ])
 }
