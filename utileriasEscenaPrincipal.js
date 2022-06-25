@@ -62,11 +62,11 @@ function crear_puntaje() {
 }
 
 function preparar_obstaculos(jugador, puntaje){
-  const velocidadDeObstaculos = 900
+  const velocidadDeObstaculos = 500
   const distanciaEntreObstaculos = height() / 2
 
   // agregar nuevo obstaculo cada .5 seg
-  loop(.5, () => {
+  loop(1, () => {
 
     const obstaculo_position = rand(0, height() - distanciaEntreObstaculos)
 
