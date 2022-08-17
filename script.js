@@ -16,8 +16,8 @@ import {
 inicializar_motor_grafico()
 
 //
-cargar_pajaros_y_tuberias()
-//cargar_cubil_scout()
+//cargar_pajaros_y_tuberias()
+cargar_cubil_scout()
 
 scene("principal", () => {
   preparar_fondo_escena_principal()
