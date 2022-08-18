@@ -12,7 +12,7 @@ function cargar_cubil_scout() {
   loadRoot("./sprites/")
   loadSprite("jugador", "grupo6.png")
   loadSprite("background", "space-back2.png")
-  loadSprite("gameover_bg", "bandera.jpg")
+  loadSprite("gameover_bg", "gameover.jpg")
   loadSprite("obstaculo", "pine.png")
 }
 
